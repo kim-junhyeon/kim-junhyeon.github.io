@@ -11,7 +11,7 @@ PROJECTS = [
        hook='온라인 협동 타워 디펜스. 콘텐츠 기획을 맡아 기획서 → 데이터테이블 → 요청서로 구현까지 연결했다.',
        thumb=None, color='#2F5496'),
   dict(slug='echo', tag='PROJECT 03 · 개인 프로젝트 · Unity 6', name='잔향 (Echo)',
-       hook='"10초 전의 내가 지금의 동료가 된다" — 수치로 정답 루트를 고정한 시간 루프 퍼즐 플랫포머.',
+       hook='"10초 전의 내가 지금의 동료가 된다", 수치로 정답 루트를 고정한 시간 루프 퍼즐 플랫포머.',
        thumb=None, color='#3A4F7A'),
   dict(slug='whoami', tag='PROJECT 04 · 5인 팀 · 비주얼 노벨', name='WHO AM I?',
        hook='감정 순서대로 여섯 방을 배치한 추리 비주얼 노벨.',
@@ -59,7 +59,7 @@ home = head('김준현 | 게임 기획 포트폴리오', 0, 'home') + f'''
 <div class="k">GAME DESIGNER · 신입</div>
 <h1>오래 남는 순간은 우연이 아니라 설계입니다.</h1>
 <p class="lead">의도한 감정을 규칙·수치·레벨로 옮기고, AI와 함께 끝까지 구현하는 게임 기획자 김준현입니다.</p>
-<div class="video" data-v="memory-ender"><div class="ph"><img src="assets/img/me-chase.jpg" alt=""><div><b style="font-size:20px;color:#fff">메모리 엔더 플레이 영상</b><br>영상 준비 중 — 아래 버튼으로 바로 플레이할 수 있습니다</div></div></div>
+<div class="video" data-v="memory-ender"><div class="ph"><img src="assets/img/me-chase.jpg" alt=""><div><b style="font-size:20px;color:#fff">메모리 엔더 플레이 영상</b><br>영상 준비 중. 아래 버튼으로 바로 플레이할 수 있습니다</div></div></div>
 <div class="btns"><a class="btn p" href="{GAME}">▶ 메모리 엔더 바로 플레이 (약 5분)</a><a class="btn g" href="projects/memory-ender.html">기획 의도 보기</a></div>
 </div></header>
 <section class="s"><div class="wrap">
@@ -86,20 +86,20 @@ me = head('메모리 엔더 | 김준현', 1, 'home') + f'''
 <p class="cap">추리 · 추격 · 장례 · 클라이맥스. 외부 이미지 없이 도형으로, 사운드는 브라우저에서 직접 합성했다.</p>
 
 <h3>기획 의도</h3>
-<p>빌드업을 쌓아 클라이맥스에서 터지는 한순간이 핵심 재미이며, 그 순간이 플레이를 계속하게 만든다. 중심 감정은 <b>연민과 갈등</b> — 지워야 한다는 걸 알지만 지우고 싶지 않은 마음을, 플레이어가 마지막에 <b>자기 손으로</b> 결정하게 만든다.</p>
+<p>빌드업을 쌓아 클라이맥스에서 터지는 한순간이 핵심 재미이며, 그 순간이 플레이를 계속하게 만든다. 중심 감정은 <b>연민과 갈등</b>이다. 지워야 한다는 걸 알지만 지우고 싶지 않은 마음을, 플레이어가 마지막에 <b>자기 손으로</b> 결정하게 만든다.</p>
 
 <h3>목표 감정 곡선</h3>
 <div class="fig"><img src="../assets/img/emotion_curve.png" alt="감정 곡선"></div>
 <p class="cap">실측값이 아닌 설계 목표. 추격 끝에서 긴장감은 내려가고, 장례로 넘어가며 연민·갈등이 정점까지 올라간다.</p>
 
-<h3>빌드업 구조 — 구간마다 쌓는 감정과 장치</h3>
+<h3>빌드업 구조: 구간마다 쌓는 감정과 장치</h3>
 <table><tr><th style="width:14%">구간</th><th style="width:20%">쌓이는 감정</th><th>기대 장치</th><th>방해 장치</th></tr>
 <tr><td><b>추리</b></td><td>사명감 → 관계 추측</td><td>단서 3개로 관계가 조금씩 드러남 (결과 → 장소 → 동기)</td><td>신호로만 위치를 앎, 오답이면 다시 추리</td></tr>
 <tr><td><b>추격</b></td><td>긴박감 + 연민의 시작</td><td>망자를 맞힐 때마다 기억 문장(주마등) 공개. 웃던 밤 → 싸우기 직전의 밤 순서</td><td>망자 회피 3종, 붕괴 지형, 잔해</td></tr>
 <tr><td><b>장례</b></td><td>갈등</td><td>갑옷 파츠를 뜯을 때마다 둘의 기억 장면으로 전환</td><td>끌어당기는 저항감, 순서 고정</td></tr>
-<tr><td><b>클라이맥스</b></td><td>연민과 갈등의 정점</td><td>데이터 망자를 누르는 동안 마지막 독백 진행</td><td>손을 떼면 멈춤 — 끝낼지는 플레이어가 쥐고 있음</td></tr></table>
+<tr><td><b>클라이맥스</b></td><td>연민과 갈등의 정점</td><td>데이터 망자를 누르는 동안 마지막 독백 진행</td><td>손을 떼면 멈춤. 끝낼지는 플레이어가 쥐고 있음</td></tr></table>
 
-<h3>핵심 플레이 — 추격 코어 루프</h3>
+<h3>핵심 플레이: 추격 코어 루프</h3>
 <div class="fig"><img src="../assets/img/core_loop.png" alt="코어 루프"></div>
 
 <h3>클라이맥스 설계</h3>
@@ -114,7 +114,7 @@ me = head('메모리 엔더 | 김준현', 1, 'home') + f'''
 <tr><td>주마등 문장이 흡수 완료 시점에 나옴</td><td>망자가 맞은 타이밍에 나와야 한다</td><td>공개 시점을 <b>명중 순간</b>으로 이동 (2.6초)</td></tr></table>
 <p class="note">전체 26항목은 게임 기획서 7-5·7-6에 변경 전·후 수치와 이유를 함께 기록했다.</p>
 
-<h3>AI 협업 — 역할 분담</h3>
+<h3>AI 협업: 역할 분담</h3>
 <table><tr><th style="width:16%">영역</th><th style="width:42%">본인</th><th>AI (Claude)</th></tr>
 <tr><td>기획·설계</td><td>세계관·스토리·감정 설계, 조작 규칙, 클라이맥스 구조 결정</td><td>선택지 제시, 문구 초안 2~3안</td></tr>
 <tr><td>구현</td><td>플레이 테스트, 버그·불편 판단</td><td>코드 작성, 사운드 합성, 자동 플레이 테스트</td></tr>
@@ -128,7 +128,7 @@ write('projects/memory-ender.html', me)
 
 # ---------------- Aftermath ----------------
 af = head('Aftermath | 김준현', 1, 'home') + '''
-<header class="phead"><div class="wrap"><div class="k">PROJECT 02 · 팀 프로젝트 · Unity</div><h1>Aftermath</h1><p>5인 온라인 협동 타워 디펜스 — 콘텐츠 기획 담당 (2026.09 ~ 12)</p></div></header>
+<header class="phead"><div class="wrap"><div class="k">PROJECT 02 · 팀 프로젝트 · Unity</div><h1>Aftermath</h1><p>5인 온라인 협동 타워 디펜스, 콘텐츠 기획 담당 (2026.09 ~ 12)</p></div></header>
 <section class="s" style="padding-top:28px"><div class="wrap">
 <div class="stats"><div class="stat"><b>40+</b><span>작성한 기획 문서</span></div><div class="stat"><b>73</b><span>규칙 변경 요청·합의</span></div><div class="stat"><b>37</b><span>Jira 담당 이슈</span></div><div class="stat"><b>5인</b><span>팀 · 콘텐츠 기획</span></div></div>
 <table class="info"><tr><td class="h">기간</td><td>2026.09 ~ 12 (12.04 발표회)</td></tr><tr><td class="h">역할</td><td>콘텐츠 기획 (5인 중 1인)</td></tr><tr><td class="h">사용 툴</td><td>Unity · Jira · Confluence · Git · Claude</td></tr></table>
@@ -153,7 +153,7 @@ write('projects/aftermath.html', af)
 
 # ---------------- 잔향 ----------------
 ec = head('잔향 | 김준현', 1, 'home') + '''
-<header class="phead"><div class="wrap"><div class="k">PROJECT 03 · 개인 프로젝트 · Unity 6</div><h1>잔향 (Echo)</h1><p>"10초 전의 내가 지금의 동료가 된다" — 시간 루프 퍼즐 플랫포머 (2026.09.11 – 09.18)</p></div></header>
+<header class="phead"><div class="wrap"><div class="k">PROJECT 03 · 개인 프로젝트 · Unity 6</div><h1>잔향 (Echo)</h1><p>"10초 전의 내가 지금의 동료가 된다", 시간 루프 퍼즐 플랫포머 (2026.09.11 – 09.18)</p></div></header>
 <section class="s" style="padding-top:28px"><div class="wrap">
 <div class="video" data-v="echo"><div class="ph" style="background:#3A4F7A"><div><b style="font-size:20px;color:#fff">잔향 플레이 영상</b><br>영상 준비 중</div></div></div>
 <div class="stats"><div class="stat"><b>30</b><span>방 (스테이지 10 × 3)</span></div><div class="stat"><b>10+</b><span>기믹 종류</span></div><div class="stat"><b>1인</b><span>기획 + AI 협업 구현</span></div><div class="stat"><b>1주</b><span>개발 기간</span></div></div>
@@ -162,7 +162,7 @@ ec = head('잔향 | 김준현', 1, 'home') + '''
 <h3>담당 업무</h3>
 <ul class="l"><li>컨셉 기획서·WBS 작성, 규칙 설계와 30개 방 레벨 디자인, 이동 방법별 수치 밸런싱</li>
 <li>Claude로 구현: 루프·녹화 시스템, 기믹 10여 종, 로비·HUD, 되감기 연출 / 에디터 스크립트로 30개 방 자동 생성</li></ul>
-<h3>레벨 설계 — 방법별 도달 높이</h3>
+<h3>레벨 설계: 방법별 도달 높이</h3>
 <table><tr><th>열쇠 든 점프</th><th>맨몸 점프</th><th>잔향 딛기</th><th>2단 탑</th><th>잔향 점프대</th></tr><tr><td>2.0</td><td>3.3</td><td>4.5</td><td>5.7</td><td>7.9</td></tr></table>
 <p>절벽 높이를 두 값 사이로 정해 "이 방법이 아니면 오를 수 없는" 방을 만들었다. 방 1에서 새 요소를 소개하고 방 3에서 앞 요소를 조합한다.</p>
 <h3>문제 → 판단 → 해결</h3>
@@ -181,15 +181,15 @@ write('projects/echo.html', ec)
 wa = head('WHO AM I? | 김준현', 1, 'home') + '''
 <header class="phead"><div class="wrap"><div class="k">PROJECT 04 · 팀 프로젝트</div><h1>WHO AM I?</h1><p>감정 곡선 레벨 설계</p></div></header>
 <section class="s" style="padding-top:28px"><div class="wrap">
-<h3 style="margin-top:0">WHO AM I? — 추리 미스터리 비주얼 노벨 (5인 팀 · 1주 · 2026.04)</h3>
-<p><b>역할:</b> 컨텐츠 · 레벨 디자인 — 여섯 방의 감정 곡선과 배치 순서, 방별 조사 루프·아이템·상호작용 조건 설계, 팀원이 그대로 구현할 수 있는 조건 문서 작성</p>
+<h3 style="margin-top:0">WHO AM I?: 추리 미스터리 비주얼 노벨 (5인 팀 · 1주 · 2026.04)</h3>
+<p><b>역할:</b> 컨텐츠 · 레벨 디자인, 여섯 방의 감정 곡선과 배치 순서, 방별 조사 루프·아이템·상호작용 조건 설계, 팀원이 그대로 구현할 수 있는 조건 문서 작성</p>
 <h3>팀 내 역할 (5인 · 렌파이 · 2026.04.20 – 26)</h3>
 <table><tr><th style="width:30%">역할</th><th style="width:16%">담당</th><th>범위</th></tr>
 <tr><td>PM · 프로그래밍</td><td>팀원 1</td><td>일정 관리, 렌파이 구현</td></tr>
 <tr><td><b>콘텐츠 · 레벨 디자인</b></td><td><b>본인</b></td><td><b>여섯 방의 감정 단계와 배치 순서, 방별 조사 루프·아이템·상호작용 조건, 구현용 조건 문서</b></td></tr>
 <tr><td>리소스 디자인</td><td>팀원 1</td><td>배경·이미지 리소스</td></tr>
 <tr><td>시나리오 · 스크립트</td><td>팀원 2</td><td>메인 시나리오와 서브 스크립트</td></tr></table>
-<h3>감정 설계 — 여섯 방의 배치 순서</h3>
+<h3>감정 설계: 여섯 방의 배치 순서</h3>
 <div class="fig"><img src="../assets/img/whoami_emotion.svg" alt="감정 단계별 여섯 방 배치"></div>
 <table><tr><th style="width:18%">단계</th><th style="width:20%">방</th><th>설계</th></tr>
 <tr><td>1 · 호감</td><td>언제 · 어디서</td><td>인물 정보 없이 배경만 서술해 분위기에 몰입시키고 NPC에게 호감을 갖게 함</td></tr>
@@ -219,10 +219,10 @@ ab = head('소개 | 김준현', 0, 'about') + f'''
 
 <h3>걸어온 길</h3>
 <div class="tl">
-<div><b>2026.04 – 12</b> 디벨로켓(경일게임아카데미) 게임 기획 교육과정 (2026.12 수료 예정) — Aftermath, 잔향, WHO AM I?, 메모리 엔더</div>
-<div><b>2025.11 – 2026.03</b> 오진양행 서비스사업부 — 커피머신 방문 수리·점검 및 고장 원인 진단</div>
+<div><b>2026.04 – 12</b> 디벨로켓(경일게임아카데미) 게임 기획 교육과정 (2026.12 수료 예정): Aftermath, 잔향, WHO AM I?, 메모리 엔더</div>
+<div><b>2025.11 – 2026.03</b> 오진양행 서비스사업부: 커피머신 방문 수리·점검 및 고장 원인 진단</div>
 <div><b>2023.02</b> 가톨릭관동대학교 방송연예학과 연출전공 학사 졸업</div>
-<div><b>2021</b> 정기공연 '벚꽃동산' 연출 — 30명, 2개월, 40석 7회 전석 만석 / 극단 임영씨어터 대표로 '하멜린' 기획·운영·정산</div>
+<div><b>2021</b> 정기공연 '벚꽃동산' 연출, 30명, 2개월, 40석 7회 전석 만석 / 극단 임영씨어터 대표로 '하멜린' 기획·운영·정산</div>
 <div><b>2019</b> 정기공연 '임차인' 첫 연출 (7회)</div>
 </div>
 
