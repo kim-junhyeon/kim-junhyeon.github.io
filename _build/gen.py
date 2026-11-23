@@ -8,7 +8,7 @@ PROJECTS = [
        hook='기억을 지우는 장의사가 장례를 거부한 망자를 쫓아, 마지막 장례를 치른다. 쌓아 온 감정을 마지막에 플레이어의 손으로 터뜨리는 구조.',
        thumb='assets/img/me-climax.jpg'),
   dict(slug='aftermath', tag='PROJECT 02 · 5인 팀 · Unity', name='Aftermath',
-       hook='온라인 협동 타워 디펜스. 콘텐츠 기획을 맡아 기획서 → 데이터테이블 → 요청서로 구현까지 연결했다.',
+       hook='온라인 협동 타워 디펜스. 콘텐츠 기획을 맡아 기획서, 데이터테이블, 요청서 순으로 구현까지 연결했다.',
        thumb=None, color='#2F5496'),
   dict(slug='echo', tag='PROJECT 03 · 개인 프로젝트 · Unity 6', name='잔향 (Echo)',
        hook='"10초 전의 내가 지금의 동료가 된다", 수치로 정답 루트를 고정한 시간 루프 퍼즐 플랫포머.',
@@ -80,7 +80,7 @@ me = head('메모리 엔더 | 김준현', 1, 'home') + f'''
 <div class="video" data-v="memory-ender"><div class="ph"><img src="../assets/img/me-funeral.jpg" alt=""><div><b style="font-size:20px;color:#fff">플레이 영상</b><br>영상 준비 중</div></div></div>
 <div class="btns"><a class="btn n" href="{GAME}">▶ 바로 플레이 (설치 없이 브라우저, 약 5분)</a><a class="btn o" href="../files/memory-ender-gdd.pdf">게임 기획서 PDF</a><a class="btn o" href="https://github.com/sei-ban/memory-ender">저장소</a></div>
 <p class="note" style="margin-top:8px">타이틀의 챕터 선택으로 원하는 구간을 바로 볼 수 있습니다. 클라이맥스는 '3. 장례'.</p>
-<div class="stats"><div class="stat"><b>3구간</b><span>추리 → 추격 → 장례</span></div><div class="stat"><b>26</b><span>플레이 튜닝 항목</span></div><div class="stat"><b>약 5분</b><span>첫 에피소드</span></div><div class="stat"><b>1인 + AI</b><span>기획 · AI 협업 구현</span></div></div>
+<div class="stats"><div class="stat"><b>3구간</b><span>추리, 추격, 장례</span></div><div class="stat"><b>26</b><span>플레이 튜닝 항목</span></div><div class="stat"><b>약 5분</b><span>첫 에피소드</span></div><div class="stat"><b>1인 + AI</b><span>기획 · AI 협업 구현</span></div></div>
 <table class="info"><tr><td class="h">기간</td><td>2026.11.19 ~ 23 (5일): 기획, 구현, 웹 배포</td></tr><tr><td class="h">역할</td><td>1인 · 기획 전반 + AI 협업 구현</td></tr><tr><td class="h">장르</td><td>스토리 중심 액션 어드벤처 (현재 빌드는 망자 한 명의 첫 에피소드, 이후 에피소드로 확장)</td></tr><tr><td class="h">사용 툴</td><td>Claude · Claude Code · Git · GitHub Pages</td></tr></table>
 <div class="gallery"><img src="../assets/img/me-investigate.jpg" alt="추리"><img src="../assets/img/me-chase.jpg" alt="추격"><img src="../assets/img/me-funeral.jpg" alt="장례"><img src="../assets/img/me-climax.jpg" alt="클라이맥스"></div>
 <p class="cap">추리 · 추격 · 장례 · 클라이맥스. 외부 이미지 없이 도형으로, 사운드는 브라우저에서 직접 합성했다.</p>
@@ -94,8 +94,8 @@ me = head('메모리 엔더 | 김준현', 1, 'home') + f'''
 
 <h3>빌드업 구조: 구간마다 쌓는 감정과 장치</h3>
 <table><tr><th style="width:14%">구간</th><th style="width:20%">쌓이는 감정</th><th>기대 장치</th><th>방해 장치</th></tr>
-<tr><td><b>추리</b></td><td>사명감 → 관계 추측</td><td>단서 3개로 관계가 조금씩 드러남 (결과 → 장소 → 동기)</td><td>신호로만 위치를 앎, 오답이면 다시 추리</td></tr>
-<tr><td><b>추격</b></td><td>긴박감 + 연민의 시작</td><td>망자를 맞힐 때마다 기억 문장(주마등) 공개. 웃던 밤 → 싸우기 직전의 밤 순서</td><td>망자 회피 3종, 붕괴 지형, 잔해</td></tr>
+<tr><td><b>추리</b></td><td>사명감에서 관계 추측으로</td><td>단서 3개로 관계가 조금씩 드러남 (결과, 장소, 동기 순)</td><td>신호로만 위치를 앎, 오답이면 다시 추리</td></tr>
+<tr><td><b>추격</b></td><td>긴박감 + 연민의 시작</td><td>망자를 맞힐 때마다 기억 문장(주마등) 공개. 웃던 밤에서 싸우기 직전의 밤 순서</td><td>망자 회피 3종, 붕괴 지형, 잔해</td></tr>
 <tr><td><b>장례</b></td><td>갈등</td><td>갑옷 파츠를 뜯을 때마다 둘의 기억 장면으로 전환</td><td>끌어당기는 저항감, 순서 고정</td></tr>
 <tr><td><b>클라이맥스</b></td><td>연민과 갈등의 정점</td><td>데이터 망자를 누르는 동안 마지막 독백 진행</td><td>손을 떼면 멈춤. 끝낼지는 플레이어가 쥐고 있음</td></tr></table>
 
@@ -105,10 +105,10 @@ me = head('메모리 엔더 | 김준현', 1, 'home') + f'''
 <h3>클라이맥스 설계</h3>
 <p>갑옷 5개를 모두 뜯어내면 데이터 망자만 남는다. 조등(장의사의 장례 도구)을 대고 <b>누르고 있는 9초</b> 동안 마지막 독백 3줄이 흐르고, 손을 떼면 멈춘다. 마지막 줄 "다음 편은… 혼자 봐야 할 거 같아."는 추격의 주마등 "다음 편은 내일 같이 보자."를 회수한다. 이후 현실의 방에서 그녀는 혼자 소파에 앉아, 이유 모를 허전함을 느낀다.</p>
 
-<h3>문제 → 판단 → 해결 (튜닝 기록 26항목 중)</h3>
+<h3>문제, 판단, 해결 (튜닝 기록 26항목 중)</h3>
 <table><tr><th style="width:28%">문제 (플레이하며 느낀 점)</th><th style="width:30%">판단</th><th>해결</th></tr>
 <tr><td>장례가 단순 홀드라 아무 감정도 전달되지 않음</td><td>지우는 행위 자체가 감정을 만들어야 한다</td><td>기사의 갑옷 파츠를 정해진 순서로 <b>직접 붙잡고 뜯어내는 조작</b>으로 재설계</td></tr>
-<tr><td>포착 링 2초가 늘어져 긴박감이 없음</td><td>추격의 리듬을 해치는 늘어짐 제거</td><td>링 2초 → <b>1초</b>, 흡수는 홀드 → <b>3초 안에 연타 10회</b></td></tr>
+<tr><td>포착 링 2초가 늘어져 긴박감이 없음</td><td>추격의 리듬을 해치는 늘어짐 제거</td><td>링 2초를 <b>1초</b>로, 흡수는 홀드에서 <b>3초 안에 연타 10회</b>로</td></tr>
 <tr><td>가시·함정·공격이 겹쳐 무조건 맞는 순간</td><td>불합리하게 지면 쌓아 온 몰입이 깨진다</td><td>기믹이 겹치지 않게 배치, 회피 전 <b>0.4초 예고</b></td></tr>
 <tr><td>문구만으로는 둘에게 무슨 일이 있었는지 와닿지 않음</td><td>보여 주는 것이 읽히는 것보다 강하다</td><td>파츠를 뜯을 때마다 <b>기억 장면으로 화면 전환</b> (5초)</td></tr>
 <tr><td>주마등 문장이 흡수 완료 시점에 나옴</td><td>망자가 맞은 타이밍에 나와야 한다</td><td>공개 시점을 <b>명중 순간</b>으로 이동 (2.6초)</td></tr></table>
@@ -165,11 +165,11 @@ ec = head('잔향 | 김준현', 1, 'home') + '''
 <h3>레벨 설계: 방법별 도달 높이</h3>
 <table><tr><th>열쇠 든 점프</th><th>맨몸 점프</th><th>잔향 딛기</th><th>2단 탑</th><th>잔향 점프대</th></tr><tr><td>2.0</td><td>3.3</td><td>4.5</td><td>5.7</td><td>7.9</td></tr></table>
 <p>절벽 높이를 두 값 사이로 정해 "이 방법이 아니면 오를 수 없는" 방을 만들었다. 방 1에서 새 요소를 소개하고 방 3에서 앞 요소를 조합한다.</p>
-<h3>문제 → 판단 → 해결</h3>
+<h3>문제, 판단, 해결</h3>
 <table><tr><th style="width:30%">문제</th><th style="width:30%">판단</th><th>해결</th></tr>
 <tr><td>잔향 위에 서면 함께 떠오르는 버그</td><td>막기보다 퍼즐 재미로 쓸 수 있다</td><td>'잔향 점프대'를 정식 기믹으로 채택, 스테이지 4~5의 중심 규칙으로</td></tr>
-<tr><td>후반 스테이지가 같은 풀이의 변주뿐</td><td>새로 배우는 규칙이 필요하다</td><td>'들면 점프가 낮아지는 열쇠' → 과거의 나에게 심부름 맡기는 퍼즐</td></tr>
-<tr><td>마지막 방에서 의도보다 쉬운 풀이</td><td>감이 아닌 수치로 막아야 한다</td><td>점프 속도·중력으로 이동 거리 계산 → 열쇠·천장·절벽 높이 조정</td></tr></table>
+<tr><td>후반 스테이지가 같은 풀이의 변주뿐</td><td>새로 배우는 규칙이 필요하다</td><td>'들면 점프가 낮아지는 열쇠'로 과거의 나에게 심부름 맡기는 퍼즐</td></tr>
+<tr><td>마지막 방에서 의도보다 쉬운 풀이</td><td>감이 아닌 수치로 막아야 한다</td><td>점프 속도·중력으로 이동 거리를 계산해 열쇠·천장·절벽 높이 조정</td></tr></table>
 <h3>문서</h3>
 <div class="docs"><a class="btn o" href="https://docs.google.com/document/d/1vu-dxKQKkXPBQW5wbZy_s9ofKNE3KVF78_-24ECuPBc/view">컨셉 기획서</a><a class="btn o" href="https://docs.google.com/document/d/1d-xTOKkE7-KGidSy0CwK18o8fCUlGtUQuFIlzTlgtlg/view">WBS</a></div>
 <div class="lesson"><b>배운 점</b>기획서는 만드는 사람이 그대로 구현할 만큼 구체적이어야 하고, 의도는 수치와 조건으로 고정해야 지켜진다.</div>
@@ -194,10 +194,10 @@ wa = head('WHO AM I? | 김준현', 1, 'home') + '''
 <table><tr><th style="width:18%">단계</th><th style="width:20%">방</th><th>설계</th></tr>
 <tr><td>1 · 호감</td><td>언제 · 어디서</td><td>인물 정보 없이 배경만 서술해 분위기에 몰입시키고 NPC에게 호감을 갖게 함</td></tr>
 <tr><td>2 · 의심·불안</td><td>무엇을 · 어떻게</td><td>사건의 실마리를 드러내 1단계의 호감과 부딪히게 함</td></tr>
-<tr><td>3 · 혼란 → 선택</td><td>왜 · 누가</td><td>NPC 정체를 공개하는 '누가'를 마지막 방에 두어 엔딩 선택(3종)에 직결</td></tr></table>
+<tr><td>3 · 혼란, 선택</td><td>왜 · 누가</td><td>NPC 정체를 공개하는 '누가'를 마지막 방에 두어 엔딩 선택(3종)에 직결</td></tr></table>
 <h3>플레이 루프</h3>
 <div class="fig" style="max-width:640px"><img src="../assets/img/whoami_loop.svg" alt="조사, 아이템 획득, 해금, 단서 확인 루프"></div>
-<p>조사 → 아이템 획득 → 해금 → 단서 확인 루프. 스토리 전달이 핵심이라 퍼즐 난이도는 낮추고, 탐색하는 동안 추측이 쌓이도록 했다.</p>
+<p>조사, 아이템 획득, 해금, 단서 확인 루프. 스토리 전달이 핵심이라 퍼즐 난이도는 낮추고, 탐색하는 동안 추측이 쌓이도록 했다.</p>
 <h3>레벨 설계 슬라이드</h3>
 <div class="slides"><iframe src="https://docs.google.com/presentation/d/11o8cVJIv6a7kVMNV6VL-Kx9cTSWrfof7U1WdUt_ZhTg/embed?start=false&loop=false" allowfullscreen loading="lazy" title="WHO AM I? 레벨 설계 슬라이드"></iframe></div>
 <div class="docs"><a class="btn o" href="https://docs.google.com/presentation/d/11o8cVJIv6a7kVMNV6VL-Kx9cTSWrfof7U1WdUt_ZhTg/view">새 창에서 보기</a></div>
