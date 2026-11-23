@@ -1,7 +1,7 @@
 # 사이트 생성기: python3 _build/gen.py  (공통 메뉴, 푸터, 다음으로 블록을 한 곳에서 관리)
 import os
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-GAME = 'https://sei-ban.github.io/memory-ender/'
+GAME = 'https://sei-ban.github.io/memory-ender/?v=1124'
 
 PROJECTS = [
   dict(slug='memory-ender', tag='PROJECT 01 | 개인 프로젝트, 웹 게임', name='메모리 엔더',
