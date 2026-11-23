@@ -13,8 +13,8 @@ PROJECTS = [
   dict(slug='echo', tag='PROJECT 03 · 개인 프로젝트 · Unity 6', name='잔향 (Echo)',
        hook='"10초 전의 내가 지금의 동료가 된다" — 수치로 정답 루트를 고정한 시간 루프 퍼즐 플랫포머.',
        thumb=None, color='#3A4F7A'),
-  dict(slug='whoami', tag='PROJECT 04 · 5인 팀 · 비주얼 노벨', name='WHO AM I? 외 기타 작업',
-       hook='감정 순서대로 여섯 방을 배치한 추리 비주얼 노벨, 그리고 역기획·데이터 테이블·UI 평가.',
+  dict(slug='whoami', tag='PROJECT 04 · 5인 팀 · 비주얼 노벨', name='WHO AM I?',
+       hook='감정 순서대로 여섯 방을 배치한 추리 비주얼 노벨.',
        thumb=None, color='#4A5D85'),
 ]
 
@@ -177,9 +177,9 @@ ec = head('잔향 | 김준현', 1, 'home') + '''
 ''' + next_block('echo') + foot(1)
 write('projects/echo.html', ec)
 
-# ---------------- WHO AM I + 기타 ----------------
-wa = head('WHO AM I? 외 기타 작업 | 김준현', 1, 'home') + '''
-<header class="phead"><div class="wrap"><div class="k">PROJECT 04 · 팀 프로젝트 / OTHER WORK</div><h1>WHO AM I? 외 기타 작업</h1><p>감정 곡선 레벨 설계와 분석·데이터 기본기</p></div></header>
+# ---------------- WHO AM I ----------------
+wa = head('WHO AM I? | 김준현', 1, 'home') + '''
+<header class="phead"><div class="wrap"><div class="k">PROJECT 04 · 팀 프로젝트</div><h1>WHO AM I?</h1><p>감정 곡선 레벨 설계</p></div></header>
 <section class="s" style="padding-top:28px"><div class="wrap">
 <h3 style="margin-top:0">WHO AM I? — 추리 미스터리 비주얼 노벨 (5인 팀 · 1주 · 2026.04)</h3>
 <p><b>역할:</b> 컨텐츠 · 레벨 디자인 — 여섯 방의 감정 곡선과 배치 순서, 방별 조사 루프·아이템·상호작용 조건 설계, 팀원이 그대로 구현할 수 있는 조건 문서 작성</p>
@@ -189,15 +189,6 @@ wa = head('WHO AM I? 외 기타 작업 | 김준현', 1, 'home') + '''
 <tr><td>3 · 혼란 → 선택</td><td>왜 · 누가</td><td>NPC 정체를 공개하는 '누가'를 마지막 방에 두어 엔딩 선택(3종)에 직결</td></tr></table>
 <p>조사 → 아이템 획득 → 해금 → 단서 확인 루프. 스토리 전달이 핵심이라 퍼즐 난이도는 낮추고, 탐색하는 동안 추측이 쌓이도록 했다.</p>
 <div class="docs"><a class="btn o" href="https://docs.google.com/presentation/d/11o8cVJIv6a7kVMNV6VL-Kx9cTSWrfof7U1WdUt_ZhTg/view">레벨 설계 슬라이드</a></div>
-<h3>역기획서 — 림버스 컴퍼니 '거미집의 검 료슈' (2026.05)</h3>
-<ul class="l"><li>스킬 메커니즘과 전투 루틴을 여러 차례 검증하며 분석</li><li>"왜 이런 수치인가"를 먼저 이해해야 한다는 피드백을 반영해, 수치 나열에서 설계 의도 중심 구조로 재작성</li></ul>
-<div class="docs"><a class="btn o" href="https://docs.google.com/document/d/1fvgHVA7jVEgDkPoFXPxJSuiOE0a7OGIbcAQocC1IH1s/view">역기획서</a></div>
-<h3>데이터 테이블 설계 (2026.05)</h3>
-<ul class="l"><li>퀘스트·NPC·보상·적 정보를 외래키로 연결한 정규화 구조와 데이터 사전 작성</li><li>캐릭터·아이템·스킬 테이블을 스키마부터 다시 설계하며 확장성과 유지보수를 기준으로 판단</li></ul>
-<div class="docs"><a class="btn o" href="https://docs.google.com/spreadsheets/d/119Zr-QN4QnxWx1L365_rGwCXouSy0-_BA74bWmi1Hys/view">데이터 테이블</a></div>
-<h3>UI/UX 휴리스틱 평가 (2026.04)</h3>
-<ul class="l"><li>가챠 UI를 학습 용이성·효율성·기억 용이성·오류 회복성·만족도 5개 기준으로 평가</li><li>1회/10회 뽑기 버튼 혼동으로 되돌릴 수 없는 오류를 '위험'으로 판정 → 버튼 구분과 확인 팝업 제안</li></ul>
-<div class="docs"><a class="btn o" href="https://docs.google.com/document/d/1FozmscxPrTVWk92fmvy09gC1E98-4IuN5NaK2rxBekU/view">평가 보고서</a></div>
 </div></section>
 ''' + next_block('whoami') + foot(1)
 write('projects/whoami.html', wa)
