@@ -24,7 +24,7 @@ def head(title, depth, active):
     items = ''.join(f'<li><a href="{p}{h}" class="{"on" if k == active else ""}">{t}</a></li>' for h, t, k in nav)
     return f'''<!DOCTYPE html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>{title}</title><meta name="description" content="게임 기획자 김준현 포트폴리오">
-<link rel="stylesheet" href="{p}assets/style.css?v=1"></head><body>
+<link rel="stylesheet" href="{p}assets/style.css?v=2"></head><body>
 <nav class="top"><div class="wrap"><a class="brand" href="{p}index.html">김준현<span>게임 기획 포트폴리오</span></a><ul>{items}</ul></div></nav>
 '''
 
@@ -188,7 +188,9 @@ wa = head('WHO AM I? | 김준현', 1, 'home') + '''
 <tr><td>2 · 의심·불안</td><td>무엇을 · 어떻게</td><td>사건의 실마리를 드러내 1단계의 호감과 부딪히게 함</td></tr>
 <tr><td>3 · 혼란 → 선택</td><td>왜 · 누가</td><td>NPC 정체를 공개하는 '누가'를 마지막 방에 두어 엔딩 선택(3종)에 직결</td></tr></table>
 <p>조사 → 아이템 획득 → 해금 → 단서 확인 루프. 스토리 전달이 핵심이라 퍼즐 난이도는 낮추고, 탐색하는 동안 추측이 쌓이도록 했다.</p>
-<div class="docs"><a class="btn o" href="https://docs.google.com/presentation/d/11o8cVJIv6a7kVMNV6VL-Kx9cTSWrfof7U1WdUt_ZhTg/view">레벨 설계 슬라이드</a></div>
+<h3>레벨 설계 슬라이드</h3>
+<div class="slides"><iframe src="https://docs.google.com/presentation/d/11o8cVJIv6a7kVMNV6VL-Kx9cTSWrfof7U1WdUt_ZhTg/embed?start=false&loop=false" allowfullscreen loading="lazy" title="WHO AM I? 레벨 설계 슬라이드"></iframe></div>
+<div class="docs"><a class="btn o" href="https://docs.google.com/presentation/d/11o8cVJIv6a7kVMNV6VL-Kx9cTSWrfof7U1WdUt_ZhTg/view">새 창에서 보기</a></div>
 </div></section>
 ''' + next_block('whoami') + foot(1)
 write('projects/whoami.html', wa)
