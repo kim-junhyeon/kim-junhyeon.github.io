@@ -108,3 +108,15 @@ footer a{color:#dfe6f3}
 
 .slides{position:relative;width:100%;aspect-ratio:16/9;margin:12px 0;border:1px solid #d9dde5;border-radius:8px;overflow:hidden;background:#f3f4f7}
 .slides iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+
+.next.top{padding:14px 0;background:var(--bg);border-bottom:1px solid var(--line)}
+.next.top .grid{gap:12px}
+.next.top .box{padding:12px 16px}
+.next.top .box b{font-size:15px}
+.next.top .box span{font-size:13px}
+
+.doclist{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:12px;margin:10px 0 8px}
+.doclist .dg{border:1px solid var(--line);border-radius:10px;padding:12px 14px;background:#fff}
+.doclist .dg b{display:block;color:var(--navy);font-size:14px;margin-bottom:6px}
+.doclist .dg a{display:block;font-size:14px;padding:3px 0;border-top:1px dashed #edf0f5}
+.doclist .dg a:first-of-type{border-top:none}

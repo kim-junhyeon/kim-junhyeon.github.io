@@ -24,7 +24,7 @@ def head(title, depth, active):
     items = ''.join(f'<li><a href="{p}{h}" class="{"on" if k == active else ""}">{t}</a></li>' for h, t, k in nav)
     return f'''<!DOCTYPE html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>{title}</title><meta name="description" content="게임 기획자 김준현 포트폴리오">
-<link rel="stylesheet" href="{p}assets/style.css?v=2"></head><body>
+<link rel="stylesheet" href="{p}assets/style.css?v=3"></head><body>
 <nav class="top"><div class="wrap"><a class="brand" href="{p}index.html">김준현<span>게임 기획 포트폴리오</span></a><ul>{items}</ul></div></nav>
 '''
 
@@ -49,6 +49,9 @@ def next_block(slug):
 </div></div></section>'''
 
 def write(path, html):
+    if path.startswith('projects/') and '</header>' in html:
+        slug = os.path.basename(path)[:-5]
+        html = html.replace('</header>', '</header>' + next_block(slug).replace('class="next"', 'class="next top"'), 1)
     full = os.path.join(ROOT, path)
     os.makedirs(os.path.dirname(full), exist_ok=True)
     open(full, 'w', encoding='utf-8').write(html)
@@ -68,7 +71,7 @@ home = head('김준현 | 게임 기획 포트폴리오', 0, 'home') + f'''
 </div></section>
 <section class="next"><div class="wrap"><div class="grid">
 <a class="box dark" href="about.html"><small>ABOUT</small><b>이 프로젝트들을 만든 사람 →</b><span>연출 전공에서 게임 기획으로 온 이야기와 일하는 방식</span></a>
-<a class="box" href="files/portfolio.pdf"><small>PDF</small><b>포트폴리오 PDF로 보기 →</b><span>이력서와 프로젝트 기술서 6쪽</span></a>
+<a class="box" href="files/portfolio.pdf"><small>PDF</small><b>포트폴리오 PDF로 보기 →</b><span>프로젝트 4개 요약, 8쪽</span></a>
 </div></div></section>
 ''' + foot(0)
 write('index.html', home)
@@ -123,7 +126,7 @@ me = head('메모리 엔더 | 김준현', 1, 'home') + f'''
 <p class="note">AI 초안을 그대로 쓰지 않은 사례: 장례 단순 홀드를 반려하고 갑옷 뜯기로 재설계 / 세계관과 어긋난 단서, 스토리 초안을 직접 수정 / AI가 임의로 뺀 '누르기' 조작을 복구하고 "사용자가 정한 구조는 AI가 바꾸지 않는다"는 작업 규칙 추가</p>
 <div class="lesson"><b>배운 점</b>수치에 약해 숫자만으로는 판단이 안 됐지만, AI로 바로 만들어 직접 플레이하며 수치와 타이밍을 고치는 방식으로 그 약점을 보완했다.</div>
 </div></section>
-''' + next_block('memory-ender') + foot(1)
+''' + foot(1)
 write('projects/memory-ender.html', me)
 
 # ---------------- Aftermath ----------------
@@ -189,9 +192,11 @@ af = head('Aftermath | 김준현', 1, 'home') + '''
    <li>목표 시간 90분에 억지로 맞추지 않고, 장마다 계산한 시간(합계 58.4분)을 그대로 따랐습니다.</li>
    <li>장마다 체크포인트를 2~3곳 두고, 저장 대신 단계별 고정 상태로 다시 시작합니다.</li></ul>
   <div class="lesson"><b>회고</b>장별 세부 명세와 스크립트를 팀원 두 명에게 나눠 맡겼지만, 업무 범위만 전하고 기준을 문서로 주지 않아 결과물을 쓰지 못했습니다. 남은 기간에 직접 다시 작업해 6장을 완성했고, 그 뒤로는 지시서를 md 파일로 만들어 질문과 답을 문서로 주고받으며 방향을 맞췄습니다.</div>
-  <p class="note" style="margin-top:3mm">팀 프로젝트의 내부 문서는 비공개 자료라 링크하지 않았습니다. 이 페이지는 본인 담당 범위만 정리했습니다.</p>
+  <h3>작업 문서 (28건, 모두 본인 작성)</h3>
+<div class="doclist"><div class="dg"><b>국왕</b><a href="../files/aftermath/king-territory-detail.pdf">국왕 영지 경영 세부기획서</a><a href="../files/aftermath/king-territory-numbers.pdf">국왕 영지 경영 수치표</a><a href="../files/aftermath/king-datatable-v8.pdf">국왕 콘텐츠 데이터테이블 v8</a><a href="../files/aftermath/king-ui-request.pdf">국왕 콘텐츠 UI 요구서</a></div><div class="dg"><b>기사</b><a href="../files/aftermath/knight-field-plan.pdf">기사 필드 개척 기획서</a><a href="../files/aftermath/knight-field-detail.pdf">기사 필드 개척 세부기획서</a><a href="../files/aftermath/knight-field-numbers.pdf">기사 필드 개척 수치표</a></div><div class="dg"><b>귀족</b><a href="../files/aftermath/noble-diplomacy-plan.pdf">귀족 외교와 내정 기획서</a><a href="../files/aftermath/noble-diplomacy-detail.pdf">귀족 외교와 내정 세부기획서</a><a href="../files/aftermath/noble-diplomacy-numbers.pdf">귀족 외교와 내정 수치표</a></div><div class="dg"><b>유닛</b><a href="../files/aftermath/unit-detail.pdf">아군 NPC와 몬스터 유닛 세부기획서</a></div><div class="dg"><b>장비</b><a href="../files/aftermath/equipment-plan.pdf">장비 시스템 기획서</a><a href="../files/aftermath/equipment-numbers.pdf">장비 수치표</a><a href="../files/aftermath/equipment-impl-request.pdf">장비 구현 요청서</a><a href="../files/aftermath/equipment-art-request.pdf">장비 아트 요청서</a></div><div class="dg"><b>스킬</b><a href="../files/aftermath/skilltree-plan.pdf">스킬트리 기획서</a><a href="../files/aftermath/skill-knight.pdf">기사 스킬 상세</a><a href="../files/aftermath/skill-noble.pdf">귀족 스킬 상세</a><a href="../files/aftermath/skill-king.pdf">국왕 스킬 상세</a><a href="../files/aftermath/skill-datatable-v7-requests.pdf">스킬 데이터테이블 v7 요청 요약</a><a href="../files/aftermath/skilltree-revision.pdf">스킬트리 보완 기획서</a><a href="../files/aftermath/skilltree-revision-impl.pdf">스킬트리 보완 구현 요청서</a></div><div class="dg"><b>튜토리얼</b><a href="../files/aftermath/tutorial-plan.pdf">튜토리얼 기획서</a><a href="../files/aftermath/tutorial-wireframe.pdf">튜토리얼 UI 와이어프레임</a></div><div class="dg"><b>제안과 변경 요청</b><a href="../files/aftermath/conscription-proposal.pdf">징집 권한 이전 제안서</a><a href="../files/aftermath/vanguard-art-request.pdf">선봉대 디자인 아트 요청서</a><a href="../files/aftermath/rule-change-requests-v11.pdf">기본 규칙 변경 요청서 v11</a><a href="../files/aftermath/build1-qa-summary.pdf">1차 빌드 구현 QA 요약</a></div></div>
+<p class="note">정책 카드와 프롤로그 캠페인 문서는 팀 저장소와 Confluence에서 관리해 이번 목록에는 넣지 않았습니다.</p>
 </div></section>
-''' + next_block('aftermath') + foot(1)
+''' + foot(1)
 write('projects/aftermath.html', af)
 
 # ---------------- 잔향 ----------------
@@ -214,10 +219,10 @@ ec = head('잔향 | 김준현', 1, 'home') + '''
 <tr><td>후반 스테이지가 같은 풀이의 변주뿐</td><td>새로 배우는 규칙이 필요하다</td><td>'들면 점프가 낮아지는 열쇠'로 과거의 나에게 심부름 맡기는 퍼즐</td></tr>
 <tr><td>마지막 방에서 의도보다 쉬운 풀이</td><td>감이 아닌 수치로 막아야 한다</td><td>점프 속도, 중력으로 이동 거리를 계산해 열쇠, 천장, 절벽 높이 조정</td></tr></table>
 <h3>문서</h3>
-<div class="docs"><a class="btn o" href="https://docs.google.com/document/d/1vu-dxKQKkXPBQW5wbZy_s9ofKNE3KVF78_-24ECuPBc/view">컨셉 기획서</a><a class="btn o" href="https://docs.google.com/document/d/1d-xTOKkE7-KGidSy0CwK18o8fCUlGtUQuFIlzTlgtlg/view">WBS</a></div>
+<div class="docs"><a class="btn o" href="../files/echo-concept.pdf">컨셉 기획서 PDF</a><a class="btn o" href="../files/echo-wbs.pdf">WBS PDF</a></div>
 <div class="lesson"><b>배운 점</b>기획서는 만드는 사람이 그대로 구현할 만큼 구체적이어야 하고, 의도는 수치와 조건으로 고정해야 지켜진다.</div>
 </div></section>
-''' + next_block('echo') + foot(1)
+''' + foot(1)
 write('projects/echo.html', ec)
 
 # ---------------- WHO AM I ----------------
@@ -245,7 +250,7 @@ wa = head('WHO AM I? | 김준현', 1, 'home') + '''
 <div class="slides"><iframe src="https://docs.google.com/presentation/d/11o8cVJIv6a7kVMNV6VL-Kx9cTSWrfof7U1WdUt_ZhTg/embed?start=false&loop=false" allowfullscreen loading="lazy" title="WHO AM I? 레벨 설계 슬라이드"></iframe></div>
 <div class="docs"><a class="btn o" href="https://docs.google.com/presentation/d/11o8cVJIv6a7kVMNV6VL-Kx9cTSWrfof7U1WdUt_ZhTg/view">새 창에서 보기</a></div>
 </div></section>
-''' + next_block('whoami') + foot(1)
+''' + foot(1)
 write('projects/whoami.html', wa)
 
 # ---------------- 소개 ----------------
