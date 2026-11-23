@@ -30,7 +30,7 @@ def head(title, depth, active):
 
 def foot(depth):
     p = '../' * depth
-    return f'''<footer><div class="wrap"><span>김준현, rlawnsgus560@gmail.com, 010-9003-3750</span><span><a href="{p}files/portfolio.pdf">포트폴리오 PDF</a>, <a href="{GAME}">메모리 엔더 플레이</a></span></div></footer>
+    return f'''<footer><div class="wrap"><span>김준현, rlawnsgus560@gmail.com, 010-9003-3750</span><span><a href="{p}files/portfolio.pdf">포트폴리오 PDF</a>, <a href="{GAME}" target="_blank" rel="noopener">메모리 엔더 플레이</a></span></div></footer>
 <script src="{p}assets/site.js?v=1"></script></body></html>'''
 
 def card(pr, p):
@@ -64,7 +64,7 @@ home = head('김준현 | 게임 기획 포트폴리오', 0, 'home') + f'''
 <h1>오래 남는 순간은 우연이 아니라 설계입니다.</h1>
 <p class="lead">의도한 감정을 규칙, 수치, 레벨로 옮기고, AI와 함께 끝까지 구현하는 게임 기획자 김준현입니다.</p>
 <div class="video" data-v="memory-ender"><div class="ph"><img src="assets/img/me-chase.jpg" alt=""><div><b style="font-size:20px;color:#fff">메모리 엔더 플레이 영상</b><br>영상 준비 중. 아래 버튼으로 바로 플레이할 수 있습니다</div></div></div>
-<div class="btns"><a class="btn p" href="{GAME}">▶ 메모리 엔더 바로 플레이 (약 5분)</a><a class="btn g" href="projects/memory-ender.html">기획 의도 보기</a></div>
+<div class="btns"><a class="btn p" href="{GAME}" target="_blank" rel="noopener">▶ 메모리 엔더 바로 플레이 (약 5분)</a><a class="btn g" href="projects/memory-ender.html">기획 의도 보기</a></div>
 </div></header>
 <section class="s"><div class="wrap">
 <h2 class="t">프로젝트</h2><p class="st">카드를 누르면 기획 의도와 설계, 플레이하며 고친 기록을 볼 수 있습니다.</p>
@@ -82,7 +82,7 @@ me = head('메모리 엔더 | 김준현', 1, 'home') + f'''
 <header class="phead"><div class="wrap"><div class="k">PROJECT 01 | 개인 프로젝트, 웹 게임</div><h1>메모리 엔더 (Memory Ender)</h1><p>기억을 지우는 장의사가 장례를 거부한 망자를 쫓아, 마지막 장례를 치른다</p></div></header>
 <section class="s" style="padding-top:28px"><div class="wrap">
 <div class="video" data-v="memory-ender"><div class="ph"><img src="../assets/img/me-funeral.jpg" alt=""><div><b style="font-size:20px;color:#fff">플레이 영상</b><br>영상 준비 중</div></div></div>
-<div class="btns"><a class="btn n" href="{GAME}">▶ 바로 플레이 (설치 없이 브라우저, 약 5분)</a><a class="btn o" href="../files/memory-ender-gdd.pdf">게임 기획서 PDF</a><a class="btn o" href="https://github.com/sei-ban/memory-ender">저장소</a></div>
+<div class="btns"><a class="btn n" href="{GAME}" target="_blank" rel="noopener">▶ 바로 플레이 (설치 없이 브라우저, 약 5분)</a><a class="btn o" href="../files/memory-ender-gdd.pdf">게임 기획서 PDF</a><a class="btn o" href="https://github.com/sei-ban/memory-ender">저장소</a></div>
 <p class="note" style="margin-top:8px">타이틀의 챕터 선택으로 원하는 구간을 바로 볼 수 있습니다. 클라이맥스는 '3. 장례'.</p>
 <div class="stats"><div class="stat"><b>3구간</b><span>추리, 추격, 장례</span></div><div class="stat"><b>26</b><span>플레이 튜닝 항목</span></div><div class="stat"><b>약 5분</b><span>첫 에피소드</span></div><div class="stat"><b>1인 + AI</b><span>기획, AI 협업 구현</span></div></div>
 <table class="info"><tr><td class="h">기간</td><td>2026.11.19 ~ 23 (5일): 기획, 구현, 웹 배포</td></tr><tr><td class="h">역할</td><td>1인, 기획 전반 + AI 협업 구현</td></tr><tr><td class="h">장르</td><td>스토리 중심 액션 어드벤처 (현재 빌드는 망자 한 명의 첫 에피소드, 이후 에피소드로 확장)</td></tr><tr><td class="h">사용 툴</td><td>Claude, Claude Code, Git, GitHub Pages</td></tr></table>
