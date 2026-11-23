@@ -81,7 +81,7 @@ me = head('메모리 엔더 | 김준현', 1, 'home') + f'''
 <div class="btns"><a class="btn n" href="{GAME}">▶ 바로 플레이 (설치 없이 브라우저, 약 5분)</a><a class="btn o" href="../files/memory-ender-gdd.pdf">게임 기획서 PDF</a><a class="btn o" href="https://github.com/sei-ban/memory-ender">저장소</a></div>
 <p class="note" style="margin-top:8px">타이틀의 챕터 선택으로 원하는 구간을 바로 볼 수 있습니다. 클라이맥스는 '3. 장례'.</p>
 <div class="stats"><div class="stat"><b>3구간</b><span>추리 → 추격 → 장례</span></div><div class="stat"><b>26</b><span>플레이 튜닝 항목</span></div><div class="stat"><b>약 5분</b><span>첫 에피소드</span></div><div class="stat"><b>1인 + AI</b><span>기획 · AI 협업 구현</span></div></div>
-<table class="info"><tr><td class="h">기간</td><td>2026.04 제안서 → 09 컨셉 기획서 → 11 플레이 빌드</td></tr><tr><td class="h">역할</td><td>1인 · 기획 전반 + AI 협업 구현</td></tr><tr><td class="h">장르</td><td>스토리 중심 액션 어드벤처 (현재 빌드는 망자 한 명의 첫 에피소드, 이후 에피소드로 확장)</td></tr><tr><td class="h">사용 툴</td><td>Claude · Claude Code · Git · GitHub Pages</td></tr></table>
+<table class="info"><tr><td class="h">기간</td><td>2026.11.19 ~ 23 (5일): 기획, 구현, 웹 배포</td></tr><tr><td class="h">역할</td><td>1인 · 기획 전반 + AI 협업 구현</td></tr><tr><td class="h">장르</td><td>스토리 중심 액션 어드벤처 (현재 빌드는 망자 한 명의 첫 에피소드, 이후 에피소드로 확장)</td></tr><tr><td class="h">사용 툴</td><td>Claude · Claude Code · Git · GitHub Pages</td></tr></table>
 <div class="gallery"><img src="../assets/img/me-investigate.jpg" alt="추리"><img src="../assets/img/me-chase.jpg" alt="추격"><img src="../assets/img/me-funeral.jpg" alt="장례"><img src="../assets/img/me-climax.jpg" alt="클라이맥스"></div>
 <p class="cap">추리 · 추격 · 장례 · 클라이맥스. 외부 이미지 없이 도형으로, 사운드는 브라우저에서 직접 합성했다.</p>
 
