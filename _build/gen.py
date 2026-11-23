@@ -24,7 +24,7 @@ def head(title, depth, active):
     items = ''.join(f'<li><a href="{p}{h}" class="{"on" if k == active else ""}">{t}</a></li>' for h, t, k in nav)
     return f'''<!DOCTYPE html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>{title}</title><meta name="description" content="게임 기획자 김준현 포트폴리오">
-<link rel="stylesheet" href="{p}assets/style.css?v=3"></head><body>
+<link rel="stylesheet" href="{p}assets/style.css?v=4"></head><body>
 <nav class="top"><div class="wrap"><a class="brand" href="{p}index.html">김준현<span>게임 기획 포트폴리오</span></a><ul>{items}</ul></div></nav>
 '''
 
