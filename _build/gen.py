@@ -84,10 +84,10 @@ me = head('메모리 엔더 | 김준현', 1, 'home') + f'''
 <div class="video" data-v="memory-ender"><div class="ph"><img src="../assets/img/me-funeral.jpg" alt=""><div><b style="font-size:20px;color:#fff">플레이 영상</b><br>영상 준비 중</div></div></div>
 <div class="btns"><a class="btn n" href="{GAME}" target="_blank" rel="noopener">▶ 바로 플레이 (설치 없이 브라우저, 약 5분)</a><a class="btn o" href="../files/memory-ender-gdd.pdf">게임 기획서 PDF</a><a class="btn o" href="https://github.com/sei-ban/memory-ender">저장소</a></div>
 <p class="note" style="margin-top:8px">타이틀의 챕터 선택으로 원하는 구간을 바로 볼 수 있습니다. 클라이맥스는 '3. 장례'.</p>
-<div class="stats"><div class="stat"><b>3구간</b><span>추리, 추격, 장례</span></div><div class="stat"><b>26</b><span>플레이 튜닝 항목</span></div><div class="stat"><b>약 5분</b><span>첫 에피소드</span></div><div class="stat"><b>1인 + AI</b><span>기획, AI 협업 구현</span></div></div>
-<table class="info"><tr><td class="h">기간</td><td>2026.11.19 ~ 23 (5일): 기획, 구현, 웹 배포</td></tr><tr><td class="h">역할</td><td>1인, 기획 전반 + AI 협업 구현</td></tr><tr><td class="h">장르</td><td>스토리 중심 액션 어드벤처 (현재 빌드는 망자 한 명의 첫 에피소드, 이후 에피소드로 확장)</td></tr><tr><td class="h">사용 툴</td><td>Claude, Claude Code, Git, GitHub Pages</td></tr></table>
-<div class="gallery"><img src="../assets/img/me-investigate.jpg" alt="추리"><img src="../assets/img/me-chase.jpg" alt="추격"><img src="../assets/img/me-funeral.jpg" alt="장례"><img src="../assets/img/me-climax.jpg" alt="클라이맥스"></div>
-<p class="cap">추리, 추격, 장례, 클라이맥스. 외부 이미지 없이 도형으로, 사운드는 브라우저에서 직접 합성했다.</p>
+<div class="stats"><div class="stat"><b>3구간</b><span>추리, 추격, 장례</span></div><div class="stat"><b>35</b><span>플레이 튜닝 항목</span></div><div class="stat"><b>약 5분</b><span>첫 에피소드</span></div><div class="stat"><b>1인 + AI</b><span>기획, AI 협업 구현</span></div></div>
+<table class="info"><tr><td class="h">기간</td><td>2026.11.19 ~ 24 (6일): 기획, 구현, 아트, 웹 배포</td></tr><tr><td class="h">역할</td><td>1인, 기획 전반 + AI 협업 구현</td></tr><tr><td class="h">장르</td><td>스토리 중심 액션 어드벤처 (현재 빌드는 망자 한 명의 첫 에피소드, 이후 에피소드로 확장)</td></tr><tr><td class="h">사용 툴</td><td>Claude, Claude Code, Git, GitHub Pages</td></tr></table>
+<div class="gallery"><img src="../assets/img/me-investigate.jpg" alt="추리"><img src="../assets/img/me-chase.jpg" alt="추격"><img src="../assets/img/me-funeral.jpg" alt="장례"><img src="../assets/img/me-memory.jpg" alt="기억 장면"><img src="../assets/img/me-climax.jpg" alt="클라이맥스"><img src="../assets/img/me-title.jpg" alt="타이틀"></div>
+<p class="cap">추리, 추격, 장례, 기억 장면, 클라이맥스, 타이틀. 외부 이미지 없이 코드로 그린 도트 그림이고, 사운드는 브라우저에서 직접 합성했다.</p>
 
 <h3>기획 의도</h3>
 <p>빌드업을 쌓아 클라이맥스에서 터지는 한순간이 핵심 재미이며, 그 순간이 플레이를 계속하게 만든다. 중심 감정은 <b>연민과 갈등</b>이다. 지워야 한다는 걸 알지만 지우고 싶지 않은 마음을, 플레이어가 마지막에 <b>자기 손으로</b> 결정하게 만든다.</p>
@@ -109,14 +109,14 @@ me = head('메모리 엔더 | 김준현', 1, 'home') + f'''
 <h3>클라이맥스 설계</h3>
 <p>갑옷 5개를 모두 뜯어내면 데이터 망자만 남는다. 조등(장의사의 장례 도구)을 대고 <b>누르고 있는 9초</b> 동안 마지막 독백 3줄이 흐르고, 손을 떼면 멈춘다. 마지막 줄 "다음 편은… 혼자 봐야 할 거 같아."는 추격의 주마등 "다음 편은 내일 같이 보자."를 회수한다. 이후 현실의 방에서 그녀는 혼자 소파에 앉아, 이유 모를 허전함을 느낀다.</p>
 
-<h3>문제, 판단, 해결 (튜닝 기록 26항목 중)</h3>
+<h3>문제, 판단, 해결 (튜닝 기록 35항목 중)</h3>
 <table><tr><th style="width:28%">문제 (플레이하며 느낀 점)</th><th style="width:30%">판단</th><th>해결</th></tr>
 <tr><td>장례가 단순 홀드라 아무 감정도 전달되지 않음</td><td>지우는 행위 자체가 감정을 만들어야 한다</td><td>기사의 갑옷 파츠를 정해진 순서로 <b>직접 붙잡고 뜯어내는 조작</b>으로 재설계</td></tr>
 <tr><td>포착 링 2초가 늘어져 긴박감이 없음</td><td>추격의 리듬을 해치는 늘어짐 제거</td><td>링 2초를 <b>1초</b>로, 흡수는 홀드에서 <b>3초 안에 연타 10회</b>로</td></tr>
 <tr><td>가시, 함정, 공격이 겹쳐 무조건 맞는 순간</td><td>불합리하게 지면 쌓아 온 몰입이 깨진다</td><td>기믹이 겹치지 않게 배치, 회피 전 <b>0.4초 예고</b></td></tr>
 <tr><td>문구만으로는 둘에게 무슨 일이 있었는지 와닿지 않음</td><td>보여 주는 것이 읽히는 것보다 강하다</td><td>파츠를 뜯을 때마다 <b>기억 장면으로 화면 전환</b> (5초)</td></tr>
 <tr><td>주마등 문장이 흡수 완료 시점에 나옴</td><td>망자가 맞은 타이밍에 나와야 한다</td><td>공개 시점을 <b>명중 순간</b>으로 이동 (2.6초)</td></tr></table>
-<p class="note">전체 26항목은 게임 기획서 7-5, 7-6에 변경 전, 후 수치와 이유를 함께 기록했다.</p>
+<p class="note">전체 35항목은 게임 기획서 7-5~7-7에 변경 전, 후 수치와 이유를 함께 기록했다.</p>
 
 <h3>AI 협업: 역할 분담</h3>
 <table><tr><th style="width:16%">영역</th><th style="width:42%">본인</th><th>AI (Claude)</th></tr>
