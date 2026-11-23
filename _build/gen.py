@@ -52,6 +52,7 @@ def write(path, html):
     if path.startswith('projects/') and '</header>' in html:
         slug = os.path.basename(path)[:-5]
         html = html.replace('</header>', '</header>' + next_block(slug).replace('class="next"', 'class="next top"'), 1)
+        html = html.replace('<footer', next_block(slug) + '<footer', 1)
     full = os.path.join(ROOT, path)
     os.makedirs(os.path.dirname(full), exist_ok=True)
     open(full, 'w', encoding='utf-8').write(html)
