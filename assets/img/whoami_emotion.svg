@@ -2,13 +2,13 @@
 <rect width="100%" height="100%" fill="#fff"/>
 <defs><marker id="a" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#2F5496"/></marker></defs>
 <rect x="30" y="20" width="292" height="78" rx="8" fill="#DCE6F5"/>
-<text x="176.0" y="52" text-anchor="middle" font-size="19" font-weight="700" fill="#1B2A4A">1단계 · 호감</text>
+<text x="176.0" y="52" text-anchor="middle" font-size="19" font-weight="700" fill="#1B2A4A">1단계: 호감</text>
 <text x="176.0" y="80" text-anchor="middle" font-size="14" fill="#1B2A4A">배경만 서술해 몰입, NPC에게 호감</text>
 <rect x="334" y="20" width="292" height="78" rx="8" fill="#B9CCEA"/>
-<text x="480.0" y="52" text-anchor="middle" font-size="19" font-weight="700" fill="#1B2A4A">2단계 · 의심·불안</text>
+<text x="480.0" y="52" text-anchor="middle" font-size="19" font-weight="700" fill="#1B2A4A">2단계: 의심, 불안</text>
 <text x="480.0" y="80" text-anchor="middle" font-size="14" fill="#1B2A4A">실마리가 1단계의 호감과 부딪힘</text>
 <rect x="638" y="20" width="292" height="78" rx="8" fill="#1B2A4A"/>
-<text x="784.0" y="52" text-anchor="middle" font-size="19" font-weight="700" fill="#fff">3단계 · 혼란과 선택</text>
+<text x="784.0" y="52" text-anchor="middle" font-size="19" font-weight="700" fill="#fff">3단계: 혼란과 선택</text>
 <text x="784.0" y="80" text-anchor="middle" font-size="14" fill="#fff">정체를 밝히는 '누가'를 마지막에</text>
 <rect x="30" y="128" width="140" height="86" rx="8" fill="#fff" stroke="#1B2A4A" stroke-width="2"/>
 <text x="100.0" y="160" text-anchor="middle" font-size="13" fill="#666">방 1</text>
