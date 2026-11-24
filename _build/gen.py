@@ -8,7 +8,7 @@ PROJECTS = [
        hook='기억을 지우는 장의사가 장례를 거부한 망자를 쫓아, 마지막 장례를 치른다. 쌓아 온 감정을 마지막에 플레이어의 손으로 터뜨리는 구조.',
        thumb='assets/img/me-climax.jpg'),
   dict(slug='aftermath', tag='PROJECT 02 | 5인 팀, Unity', name='Aftermath',
-       hook='온라인 협동 타워 디펜스. 콘텐츠 기획을 맡아 기획서, 데이터테이블, 요청서 순으로 구현까지 연결했다.',
+       hook='3인 온라인 협동 타워 디펜스. 콘텐츠 기획을 맡아 기획서, 데이터테이블, 요청서 순으로 구현까지 연결했다.',
        thumb='assets/img/af-battle-full.jpg', color='#2F5496'),
   dict(slug='echo', tag='PROJECT 03 | 개인 프로젝트, Unity 6', name='잔향 (Echo)',
        hook='"10초 전의 내가 지금의 동료가 된다", 수치로 정답 루트를 고정한 시간 루프 퍼즐 플랫포머.',
@@ -133,11 +133,11 @@ write('projects/memory-ender.html', me)
 
 # ---------------- Aftermath ----------------
 af = head('Aftermath | 김준현', 1, 'home') + '''
-<header class="phead"><div class="wrap"><div class="k">PROJECT 02 | 팀 프로젝트, Unity</div><h1>Aftermath</h1><p>5인 온라인 협동 타워 디펜스, 콘텐츠 기획 담당 (2026.09 ~ 12)</p></div></header>
+<header class="phead"><div class="wrap"><div class="k">PROJECT 02 | 팀 프로젝트, Unity</div><h1>Aftermath</h1><p>3인 온라인 협동 타워 디펜스, 5인 팀에서 콘텐츠 기획 담당 (2026.09 ~ 12)</p></div></header>
 <section class="s" style="padding-top:28px"><div class="wrap">
 
   <div class="stats"><div class="stat"><b>40+</b><span>작성한 기획 문서</span></div><div class="stat"><b>73</b><span>규칙 변경 요청, 명세 반영</span></div><div class="stat"><b>37</b><span>Jira 담당 이슈</span></div><div class="stat"><b>10</b><span>1차 빌드 구현 PR</span></div></div>
-  <table class="info"><tr><td class="h">기간</td><td>2026.09 ~ 12 (12.04 발표회)</td><td class="h">역할</td><td>콘텐츠 기획 (5인 중 1인)</td></tr><tr><td class="h">장르</td><td>온라인 협동 타워 디펜스 (PC)</td><td class="h">사용 툴</td><td>Unity, Jira, Confluence, Git, Claude</td></tr></table>
+  <table class="info"><tr><td class="h">기간</td><td>2026.09 ~ 12 (12.04 발표회)</td><td class="h">역할</td><td>콘텐츠 기획 (5인 중 1인)</td></tr><tr><td class="h">장르</td><td>3인 온라인 협동 타워 디펜스 (PC)</td><td class="h">사용 툴</td><td>Unity, Jira, Confluence, Git, Claude</td></tr></table>
   <div class="gallery"><img src="../assets/img/af-title.jpg" alt="타이틀"><img src="../assets/img/af-day-full.jpg" alt="낮 준비"><img src="../assets/img/af-battle-full.jpg" alt="밤 전투"><img src="../assets/img/af-skill-full.jpg" alt="스킬트리"><img src="../assets/img/af-estate-full.jpg" alt="국왕 영지"><img src="../assets/img/af-diplo-full.jpg" alt="귀족 외교"></div>
   <p class="cap">타이틀, 낮 준비, 밤 전투, 스킬트리, 국왕 영지, 귀족 외교. 개발 빌드 화면이며 아트와 구현은 팀 공동 작업이다.</p>
   <h3>담당한 콘텐츠</h3>
