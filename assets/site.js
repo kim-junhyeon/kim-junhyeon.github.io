@@ -32,3 +32,6 @@ document.querySelectorAll('.video[data-v]').forEach(el => {
     if (e.key === 'Escape') close(); else if (e.key === 'ArrowLeft') show(i - 1); else if (e.key === 'ArrowRight') show(i + 1);
   });
 })();
+
+// PDF는 새 탭에서 열기 (사이트를 떠나지 않게)
+document.querySelectorAll('a[href$=".pdf"]').forEach(a => { a.target = '_blank'; a.rel = 'noopener'; });

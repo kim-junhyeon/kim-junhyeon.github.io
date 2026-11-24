@@ -31,7 +31,7 @@ def head(title, depth, active):
 def foot(depth):
     p = '../' * depth
     return f'''<footer><div class="wrap"><span>김준현, rlawnsgus560@gmail.com, 010-9003-3750</span><span><a href="{p}files/portfolio.pdf">포트폴리오 PDF</a>, <a href="{GAME}" target="_blank" rel="noopener">메모리 엔더 플레이</a></span></div></footer>
-<script src="{p}assets/site.js?v=3"></script></body></html>'''
+<script src="{p}assets/site.js?v=4"></script></body></html>'''
 
 def card(pr, p):
     if pr['thumb']:
