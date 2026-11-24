@@ -68,6 +68,12 @@ table.info td.h{background:#F2F5FA;color:var(--navy);font-weight:700;width:110px
 .cap{font-size:13px;color:var(--muted);margin-bottom:12px}
 .gallery{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin:10px 0}
 .gallery img{border-radius:8px;border:1px solid var(--line)}
+.gallery img{cursor:zoom-in;transition:opacity .15s}.gallery img:hover{opacity:.85}
+.lb{position:fixed;inset:0;background:rgba(10,14,24,.92);display:none;align-items:center;justify-content:center;z-index:1000;cursor:zoom-out}
+.lb.on{display:flex}.lb img{max-width:92vw;max-height:84vh;border-radius:6px;cursor:default;image-rendering:auto}
+.lb button{position:absolute;background:none;border:0;color:#fff;font-size:44px;line-height:1;cursor:pointer;padding:12px 18px;opacity:.8}.lb button:hover{opacity:1}
+.lb-x{top:8px;right:12px}.lb-p{left:8px;top:50%;transform:translateY(-50%)}.lb-n{right:8px;top:50%;transform:translateY(-50%)}
+.lb-c{position:absolute;bottom:18px;left:0;right:0;text-align:center;color:#dfe5ef;font-size:14px}
 ul.l{padding-left:20px;margin-bottom:12px}ul.l li{margin-bottom:4px}
 .lesson{background:var(--navy);color:#fff;border-radius:10px;padding:16px 20px;margin:26px 0 0}
 .lesson b{color:var(--sky);margin-right:8px}

@@ -24,14 +24,14 @@ def head(title, depth, active):
     items = ''.join(f'<li><a href="{p}{h}" class="{"on" if k == active else ""}">{t}</a></li>' for h, t, k in nav)
     return f'''<!DOCTYPE html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>{title}</title><meta name="description" content="게임 기획자 김준현 포트폴리오">
-<link rel="stylesheet" href="{p}assets/style.css?v=4"></head><body>
+<link rel="stylesheet" href="{p}assets/style.css?v=5"></head><body>
 <nav class="top"><div class="wrap"><a class="brand" href="{p}index.html">김준현<span>게임 기획 포트폴리오</span></a><ul>{items}</ul></div></nav>
 '''
 
 def foot(depth):
     p = '../' * depth
     return f'''<footer><div class="wrap"><span>김준현, rlawnsgus560@gmail.com, 010-9003-3750</span><span><a href="{p}files/portfolio.pdf">포트폴리오 PDF</a>, <a href="{GAME}" target="_blank" rel="noopener">메모리 엔더 플레이</a></span></div></footer>
-<script src="{p}assets/site.js?v=2"></script></body></html>'''
+<script src="{p}assets/site.js?v=3"></script></body></html>'''
 
 def card(pr, p):
     if pr['thumb']:
